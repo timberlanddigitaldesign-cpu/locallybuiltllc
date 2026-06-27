@@ -14,6 +14,8 @@
 @media (max-width: 768px) {
   .about-hero-text { padding-top: 16px; }
   .hero-inner { align-items: flex-start; }
+  .about-photo-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .about-photo-grid img { height: 180px !important; }
 }
 @media (min-width: 769px) {
   .about-hero-text { padding: 40px 0 280px 60px; align-self: flex-start; }
@@ -85,10 +87,10 @@
 
   <!-- BRAND LIFESTYLE PHOTOS -->
   <section class="section--light" style="padding:0 0 0;">
-    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:0; overflow:hidden;">
+    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:0; overflow:hidden;" class="about-photo-grid">
       <img src="images/nice.png" alt="Locally Built — on the job" style="width:100%; height:280px; object-fit:cover;" />
-      <img src="images/nice2.png" alt="Locally Built — hat on the roof" style="width:100%; height:280px; object-fit:cover;" />
-      <img src="images/nice4.png" alt="Locally Built LLC hat on a job site" style="width:100%; height:280px; object-fit:cover;" />
+      <img src="images/work.png" alt="Locally Built — window installation" style="width:100%; height:280px; object-fit:cover;" />
+      <img src="images/roofwash2.png" alt="Roof cleaning results" style="width:100%; height:280px; object-fit:cover;" />
       <img src="images/dirtyhands.png" alt="Hardworking hands — real craftsmanship" style="width:100%; height:280px; object-fit:cover;" />
     </div>
   </section>
