@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Locally Built LLC | Home Maintenance Portfolio · Bandon, Oregon</title>
+  <meta name="description" content="Browse completed projects by Locally Built LLC — roof cleaning, pressure washing, decks, ramps, painting, gutters, and more across Bandon and the Oregon Coast." />
+  <link rel="canonical" href="https://www.locallybuiltllc.com/projects.html" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .hero-inner { background: linear-gradient(to right, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.0) 60%), url('images/nice5.png') center/cover no-repeat; padding:160px 0 540px; }
+    .hero-inner p { color:rgba(255,255,255,0.78); font-size:1.05rem; max-width:560px; }
+    @media (max-width: 768px) {
+      .hero-inner { padding:80px 0 100px !important; }
+    }
+
+    .filter-bar { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:36px; }
+    .filter-btn { padding:8px 20px; border-radius:100px; font-family:var(--font-head); font-weight:600; font-size:0.84rem; border:2px solid var(--color-gray-lt); color:var(--color-gray); cursor:pointer; transition:all 0.2s; background:transparent; }
+    .filter-btn:hover, .filter-btn.active { border-color:var(--color-accent); color:var(--color-accent); background:rgba(74,124,63,0.07); }
+
+    .project-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+    .project-card { border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow); cursor:pointer; transition:transform 0.25s, box-shadow 0.25s; }
+    .project-card:hover { transform:translateY(-5px); box-shadow:var(--shadow-lg); }
+    .project-thumb { height:240px; overflow:hidden; }
+    .project-thumb img { width:100%; height:100%; object-fit:cover; transition:transform 0.4s; }
+    .project-card:hover .project-thumb img { transform:scale(1.06); }
+    .project-info { padding:20px 22px; background:#fff; }
+    .project-type { font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--color-accent); margin-bottom:6px; }
+    .project-info h3 { font-size:1.05rem; margin-bottom:6px; }
+    .project-info p { font-size:0.88rem; color:var(--color-gray); }
+
+    /* Before/After pairs */
+    .ba-pair { border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow); }
+    .ba-pair .ba-row { display:grid; grid-template-columns:1fr 1fr; }
+    .ba-pair .ba-img { position:relative; }
+    .ba-pair .ba-img img { width:100%; height:220px; object-fit:cover; display:block; }
+    .ba-label { position:absolute; bottom:8px; left:8px; background:rgba(0,0,0,0.65); color:#fff; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; padding:3px 9px; border-radius:4px; }
+    .ba-pair .ba-caption { background:#fff; padding:16px 20px; }
+    .ba-pair .ba-caption .project-type { font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--color-accent); margin-bottom:4px; }
+    .ba-pair .ba-caption h3 { font-size:1rem; margin-bottom:4px; }
+    .ba-pair .ba-caption p { font-size:0.85rem; color:var(--color-gray); }
+
+    @media (max-width:768px) { .project-grid { grid-template-columns:1fr; } .ba-pair .ba-row { grid-template-columns:1fr; } }
+    @media (max-width:1024px) and (min-width:769px) { .project-grid { grid-template-columns:1fr 1fr; } }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo">
+      <img src="images/Company Logo.png" alt="Locally Built LLC" style="height:48px;width:auto;" />
+      <div class="nav-logo-text">Locally Built LLC<span>Home Maintenance · Bandon, OR</span></div>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="nav-cta">Get a Quote</a>
+    </div>
+    <button class="nav-mobile-toggle" onclick="toggleNav()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="page-content">
+
+<div class="hero-inner">
+  <div style="max-width:600px; padding-left:60px;">
+    <div class="section-label" style="text-shadow:0 1px 6px rgba(0,0,0,0.9);">Our Work</div>
+    <h1 style="color:#fff; margin-bottom:14px; text-shadow:0 2px 12px rgba(0,0,0,0.8), 0 1px 3px rgba(0,0,0,0.9);">Project Portfolio</h1>
+    <p style="text-shadow:0 2px 8px rgba(0,0,0,0.9), 0 1px 3px rgba(0,0,0,1); color:#fff;">A look at some of our work — roof cleaning, pressure washing, decks, ramps, painting, carpentry, and more across Bandon and the Oregon Coast.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+
+    <!-- Filters -->
+    <div class="filter-bar" id="filterBar">
+      <button class="filter-btn active" data-filter="all">All Projects</button>
+      <button class="filter-btn" data-filter="roofing">Roof &amp; Gutters</button>
+      <button class="filter-btn" data-filter="washing">Pressure Washing</button>
+      <button class="filter-btn" data-filter="deck">Decks &amp; Outdoor</button>
+      <button class="filter-btn" data-filter="painting">Painting</button>
+      <button class="filter-btn" data-filter="carpentry">Carpentry &amp; Builds</button>
+    </div>
+
+    <!-- BEFORE/AFTER PAIRS -->
+    <h3 style="margin-bottom:20px; color:var(--color-gray); font-size:0.8rem; text-transform:uppercase; letter-spacing:0.12em; font-weight:700;">Before &amp; After</h3>
+    <div class="project-grid" style="margin-bottom:40px;">
+
+      <div class="ba-pair" data-category="roofing">
+        <div class="ba-row">
+          <div class="ba-img"><img src="images/roofwash3.png" alt="Commercial roof before cleaning — heavy moss" /><div class="ba-label">Before</div></div>
+          <div class="ba-img"><img src="images/roofwash2.png" alt="Commercial roof after cleaning" /><div class="ba-label">After</div></div>
+        </div>
+        <div class="ba-caption">
+          <div class="project-type">Roof Cleaning</div>
+          <h3>Commercial Roof — Moss Treatment</h3>
+          <p>Commercial roof soft wash — moss, algae, and buildup removed using a low-pressure treatment that won't damage roofing materials</p>
+        </div>
+      </div>
+
+      <div class="ba-pair" data-category="roofing">
+        <div class="ba-row">
+          <div class="ba-img"><img src="images/roofandgutterclean3.png" alt="Residential roof before cleaning" /><div class="ba-label">Before</div></div>
+          <div class="ba-img"><img src="images/roofandgutterclean3after.png" alt="Residential roof after cleaning" /><div class="ba-label">After</div></div>
+        </div>
+        <div class="ba-caption">
+          <div class="project-type">Roof Cleaning</div>
+          <h3>Residential Roof — Soft Wash</h3>
+          <p>Residential soft wash roof cleaning — gentle low-pressure treatment removes moss and lichen buildup to protect shingles and extend roof life</p>
+        </div>
+      </div>
+
+      <div class="ba-pair" data-category="roofing">
+        <div class="ba-row">
+          <div class="ba-img"><img src="images/roofcleanbefore.png" alt="Roof and gutters before cleaning" /><div class="ba-label">Before</div></div>
+          <div class="ba-img"><img src="images/roofcleanafter.png" alt="Roof and gutters after cleaning" /><div class="ba-label">After</div></div>
+        </div>
+        <div class="ba-caption">
+          <div class="project-type">Roof &amp; Gutter Cleaning</div>
+          <h3>Full Roof &amp; Gutter Service</h3>
+          <p>Full roof and gutter service — moss treatment applied to the roof surface combined with a complete gutter cleanout, flush, and debris removal</p>
+        </div>
+      </div>
+
+      <div class="ba-pair" data-category="painting">
+        <div class="ba-row">
+          <div class="ba-img"><img src="images/interiorpaintbfr.png" alt="Room before interior painting" /><div class="ba-label">Before</div></div>
+          <div class="ba-img"><img src="images/interiotpaintaftr.png" alt="Room after interior painting" /><div class="ba-label">After</div></div>
+        </div>
+        <div class="ba-caption">
+          <div class="project-type">Interior Painting</div>
+          <h3>Full Room Repaint</h3>
+          <p>Interior painting — walls patched, primed, and painted with a clean finish coat that completely refreshes the look of a room</p>
+        </div>
+      </div>
+
+      <div class="ba-pair" data-category="washing">
+        <div class="ba-row">
+          <div class="ba-img"><img src="images/drivewaywash.png" alt="Parking lot before pressure washing" /><div class="ba-label">Before</div></div>
+          <div class="ba-img"><img src="images/drivewaywash after.png" alt="Parking lot after pressure washing" /><div class="ba-label">After</div></div>
+        </div>
+        <div class="ba-caption">
+          <div class="project-type">Pressure Washing</div>
+          <h3>Commercial Lot Re-stripe &amp; Wash</h3>
+          <p>Coos County, OR · Full pressure wash and line restriping</p>
+        </div>
+      </div>
+
+      <div class="ba-pair" data-category="deck">
+        <div class="ba-row">
+          <div class="ba-img"><img src="images/deckbefore.png" alt="Deck before refinishing" /><div class="ba-label">Before</div></div>
+          <div class="ba-img"><img src="images/deck.png" alt="Deck after refinishing" /><div class="ba-label">After</div></div>
+        </div>
+        <div class="ba-caption">
+          <div class="project-type">Deck</div>
+          <h3>Deck Refinish &amp; Stain</h3>
+          <p>Deck refinishing and staining — deck sanded, cleaned, and stained with a fresh protective coat to restore color and prevent weathering</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- PROJECT GALLERY -->
+    <h3 style="margin-bottom:20px; color:var(--color-gray); font-size:0.8rem; text-transform:uppercase; letter-spacing:0.12em; font-weight:700;">Project Gallery</h3>
+    <div class="project-grid" id="projectGrid">
+
+      <div class="project-card" data-category="roofing">
+        <div class="project-thumb"><img src="images/gutterdebris.png" alt="Gutter full of debris" /></div>
+        <div class="project-info"><div class="project-type">Roof &amp; Gutter Cleaning</div><h3>Gutter Debris Removal</h3><p>Gutter cleaning — complete debris removal, flushing, and inspection to keep water flowing away from your home</p></div>
+      </div>
+
+      <div class="project-card" data-category="roofing">
+        <div class="project-thumb"><img src="images/mossbefore.png" alt="Metal roof heavy moss before removal" /></div>
+        <div class="project-info"><div class="project-type">Roof Cleaning</div><h3>Metal Roof — Moss Removal</h3><p>Moss removal from metal roofs — manual scrubbing and treatment to eliminate moss and algae buildup, protecting the roof surface and extending its life</p></div>
+      </div>
+
+      <div class="project-card" data-category="roofing">
+        <div class="project-thumb"><img src="images/roofmoss.png" alt="Shingle roof heavy moss before treatment" /></div>
+        <div class="project-info"><div class="project-type">Roof Cleaning</div><h3>Shingle Roof — Moss Treatment</h3><p>Shingle roof moss treatment — applied solution that kills moss at the root and prevents regrowth</p></div>
+      </div>
+
+      <div class="project-card" data-category="roofing">
+        <div class="project-thumb"><img src="images/gutterscreens.png" alt="Gutter screen installation" /></div>
+        <div class="project-info"><div class="project-type">Gutter Guards</div><h3>Downspout Filter Installation</h3><p>Downspout filter installation — keeps debris out of your downspouts so gutters drain freely all year</p></div>
+      </div>
+
+
+
+      <div class="project-card" data-category="deck">
+        <div class="project-thumb"><img src="images/ramp.png" alt="Accessibility ramp with handrails" /></div>
+        <div class="project-info"><div class="project-type">Accessibility</div><h3>Residential Access Ramp</h3><p>Accessibility ramp construction — custom built to fit your home with handrails, solar caps, and composite decking</p></div>
+      </div>
+
+      <div class="project-card" data-category="carpentry">
+        <div class="project-thumb"><img src="images/packagedropbox.png" alt="Custom package drop box" /></div>
+        <div class="project-info"><div class="project-type">Custom Build</div><h3>Package Drop Box &amp; Covered Entry</h3><p>Custom package drop box and covered entry — secure, weather-protected, and built with character using natural materials</p></div>
+      </div>
+
+      <div class="project-card" data-category="carpentry">
+        <div class="project-thumb"><img src="images/greenhouse2.png" alt="Completed greenhouse build" /></div>
+        <div class="project-info"><div class="project-type">Custom Build</div><h3>Backyard Greenhouse</h3><p>Custom greenhouse builds — framed, paneled, and finished so you can grow year-round on the Oregon Coast</p></div>
+      </div>
+
+      <div class="project-card" data-category="carpentry">
+        <div class="project-thumb"><img src="images/windows.png" alt="Window trim installation" /></div>
+        <div class="project-info"><div class="project-type">Carpentry &amp; Trim</div><h3>Window Trim &amp; Casing Installation</h3><p>Window installation and interior trim — new windows fitted and finished with clean casing and sill work</p></div>
+      </div>
+
+      <div class="project-card" data-category="washing">
+        <div class="project-thumb"><img src="images/pressurewashbeforeafter.png" alt="House siding pressure wash before and after" /></div>
+        <div class="project-info"><div class="project-type">Pressure Washing</div><h3>House Siding — Soft Wash</h3><p>House siding soft wash — removes algae, mildew, and years of buildup from vinyl, wood, and painted siding</p></div>
+      </div>
+
+      <div class="project-card" data-category="roofing">
+        <div class="project-thumb"><img src="images/roofcleaning2.png" alt="Metal roof cleaning" /></div>
+        <div class="project-info"><div class="project-type">Roof Cleaning</div><h3>Metal Roof — Debris Clearing</h3><p>Metal roof debris clearing — blower and brush work to remove pine needles and buildup from valleys and seams</p></div>
+      </div>
+
+      <div class="project-card" data-category="deck">
+        <div class="project-thumb"><img src="images/Steps.png" alt="Custom wood steps and porch build" /></div>
+        <div class="project-info"><div class="project-type">Decks &amp; Outdoor</div><h3>Custom Steps &amp; Porch Build</h3><p>Custom wood steps and covered porch entry — built and stained to match your home's exterior for a clean, finished look</p></div>
+      </div>
+
+      <div class="project-card" data-category="deck">
+        <div class="project-thumb"><img src="images/lawn.png" alt="Lawn mowing on large property" /></div>
+        <div class="project-info"><div class="project-type">Lawn &amp; Property</div><h3>Large Property Mowing</h3><p>Lawn and property maintenance — mowing, cleanup, and ongoing care for residential and estate properties</p></div>
+      </div>
+
+    </div>
+
+    
+
+    <div style="text-align:center; margin-top:50px;">
+      <p style="margin-bottom:20px; font-size:1.05rem;">Have a project in mind?</p>
+      <a href="contact.html" class="btn btn-primary">Get a Free Quote</a>
+    </div>
+
+  </div>
+</section>
+
+<section style="background:var(--color-accent); padding:70px 0;">
+  <div class="container" style="text-align:center;">
+    <h2 style="color:#fff; margin-bottom:14px;">Your Project Could Be Next</h2>
+    <p style="color:rgba(255,255,255,0.85); max-width:460px; margin:0 auto 32px;">We'd love to talk about what you're building. Reach out for a free estimate — no pressure, just a conversation.</p>
+    <div class="btn-group" style="justify-content:center;">
+      <a href="contact.html" class="btn" style="background:#fff;color:var(--color-accent);font-weight:800;">Request a Quote</a>
+      <a href="contact.html" class="btn btn-outline">Get in Touch</a>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="nav-logo-text" style="font-size:1.1rem;">Locally Built LLC<span>Home Maintenance · Bandon, OR</span></div><p>Licensed, insured, and bonded home maintenance company serving Bandon and the Oregon Coast.</p></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html#repairs">Repairs &amp; Maintenance</a></li><li><a href="services.html#roofing">Roof Cleaning &amp; Gutters</a></li><li><a href="services.html#washing">Pressure Washing</a></li><li><a href="services.html#decks">Decks &amp; Outbuildings</a></li><li><a href="services.html#painting">Painting</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="projects.html">Our Projects</a></li><li><a href="contact.html">Get a Quote</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4>
+        <div class="footer-contact-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 11.61a19.79 19.79 0 01-3.07-8.67A2 2 0 011.9 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.69a16 16 0 006.22 6.22l1.06-1.06a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><a href="tel:+15412520566" style="color:rgba(255,255,255,0.65);">(541) 252-0566</a></div>
+        <div class="footer-contact-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Bandon, Oregon 97411</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Locally Built LLC. All rights reserved. | Website by <a href="https://www.timberlanddigital.com" style="color:var(--color-accent);">Timberland Digital Design</a></p>
+      <div class="footer-badges"><div class="footer-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Licensed</div><div class="footer-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Insured</div><div class="footer-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Bonded</div></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleNav(){document.getElementById('navLinks').classList.toggle('open');}
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+    const filter = this.dataset.filter;
+    document.querySelectorAll('.project-card, .ba-pair').forEach(card => {
+      if (filter === 'all' || card.dataset.category === filter) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>
