@@ -1,118 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Locally Built LLC — Home Maintenance | Bandon, Oregon</title>
-  <meta name="description" content="Locally Built LLC is a licensed, insured, and bonded home maintenance company serving Bandon, Oregon and the surrounding Coos County coast. Repairs, remodels, decks, painting, and more." />
-  <meta name="keywords" content="home maintenance Bandon Oregon, contractor Bandon OR, home remodel Coos County, new home build Oregon coast, licensed contractor" />
-  <link rel="canonical" href="https://www.locallybuiltllc.com/" />
-  <meta property="og:title" content="Locally Built LLC — Home Maintenance | Bandon, Oregon" />
-  <meta property="og:description" content="Licensed, insured & bonded home maintenance company serving Bandon, OR and the Oregon Coast." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.locallybuiltllc.com/" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "HomeAndConstructionBusiness",
-    "name": "Locally Built LLC",
-    "url": "https://www.locallybuiltllc.com",
-    "telephone": "+1-541-252-0566",
-    "email": "info@locallybuiltllc.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Bandon",
-      "addressRegion": "OR",
-      "postalCode": "97411",
-      "addressCountry": "US"
-    },
-    "areaServed": ["Bandon", "Coos Bay", "Coquille", "Port Orford", "Coos County"],
-    "description": "Licensed, insured, and bonded home maintenance company serving Bandon, Oregon and the surrounding Oregon Coast.",
-    "hasCredential": ["Licensed", "Insured", "Bonded"],
-    "priceRange": "$$",
-    "openingHours": ["Mo 06:00-20:00","Tu 06:00-20:00","We 06:00-20:00","Th 06:00-20:00","Fr 06:00-20:00","Sa 06:00-20:00"]
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Locally Built LLC — Home Maintenance | Bandon, Oregon</title>
+<meta name="description" content="Locally Built LLC is a licensed, insured, and bonded home maintenance company serving Bandon, Oregon and the surrounding Coos County coast. Repairs, remodels, decks, painting, and more." />
+<meta name="keywords" content="home maintenance Bandon Oregon, contractor Bandon OR, home remodel Coos County, new home build Oregon coast, licensed contractor" />
+<link rel="canonical" href="https://www.locallybuiltllc.com/" />
+<meta property="og:title" content="Locally Built LLC — Home Maintenance | Bandon, Oregon" />
+<meta property="og:description" content="Licensed, insured & bonded home maintenance company serving Bandon, OR and the Oregon Coast." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.locallybuiltllc.com/" />
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "HomeAndConstructionBusiness",
+"name": "Locally Built LLC",
+"url": "https://www.locallybuiltllc.com",
+"telephone": "+1-541-252-0566",
+"email": "info@locallybuiltllc.com",
+"address": {
+"@type": "PostalAddress",
+"addressLocality": "Bandon",
+"addressRegion": "OR",
+"postalCode": "97411",
+"addressCountry": "US"
+},
+"areaServed": ["Bandon", "Coos Bay", "Coquille", "Port Orford", "Coos County"],
+"description": "Licensed, insured, and bonded home maintenance company serving Bandon, Oregon and the surrounding Oregon Coast.",
+"hasCredential": ["Licensed", "Insured", "Bonded"],
+"priceRange": "$$",
+"openingHours": ["Mo 06:00-20:00","Tu 06:00-20:00","We 06:00-20:00","Th 06:00-20:00","Fr 06:00-20:00","Sa 06:00-20:00"]
+}
+</script>
+<link rel="stylesheet" href="style.css" />
+<style>
+.hero-bg {
+  position: relative;
+  min-height: 640px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.15) 100%);
+  z-index: 1;
+}
+.hero-bg img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 75% center;
+}
+.hero-bg .container { position: relative; z-index: 2; }
+
+.hero-inner {
+  background: linear-gradient(135deg, rgba(20,40,15,0.92) 0%, rgba(43,82,36,0.80) 100%),
+    url('images/Work Truck.jpg') center/cover no-repeat;
+  padding: 80px 0 70px;
+}
+.hero-inner p { color: rgba(255,255,255,0.78); font-size: 1.05rem; max-width: 560px; }
+
+.ba-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; border-radius: var(--radius-lg); overflow: hidden; }
+.ba-img { position: relative; }
+.ba-img img { width: 100%; height: 260px; object-fit: cover; display: block; }
+.ba-label {
+  position: absolute; bottom: 10px; left: 10px;
+  background: rgba(0,0,0,0.6); color: #fff;
+  font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.1em; padding: 4px 10px; border-radius: 4px;
+}
+
+.photo-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: 50px; border-radius: var(--radius-lg); overflow: hidden; }
+.photo-strip img { width: 100%; height: 180px; object-fit: cover; display: block; transition: transform 0.3s; }
+.photo-strip img:hover { transform: scale(1.04); }
+
+/* ── Section Dividers ── */
+.section-divider {
+  display: block;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.section-divider svg {
+  display: block;
+  width: 100%;
+  height: 54px;
+}
+
+@media (max-width: 768px) {
+  .ba-grid { grid-template-columns: 1fr; }
+  .photo-strip { grid-template-columns: repeat(2, 1fr); }
+  .hero-bg img { object-position: 35% top !important; }
+  .hero-bg > div { padding: 60px 24px 40px !important; }
+  .section-divider svg { height: 32px; }
+}
+
+@media (max-width: 768px) {
+  .hero-bg img {
+    content: url("images/nice3.png");
+    object-position: 90% 25% !important;
   }
-  </script>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    .hero-bg {
-      position: relative;
-      min-height: 640px;
-      display: flex;
-      align-items: center;
-      overflow: hidden;
-    }
-    .hero-bg::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to right, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.15) 100%);
-      z-index: 1;
-    }
-    .hero-bg img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: 75% center;
-    }
-    .hero-bg .container { position: relative; z-index: 2; }
+}
 
-    /* Hero inner for sub-pages */
-    .hero-inner {
-      background: linear-gradient(135deg, rgba(20,40,15,0.92) 0%, rgba(43,82,36,0.80) 100%),
-        url('images/Work Truck.jpg') center/cover no-repeat;
-      padding: 80px 0 70px;
-    }
-    .hero-inner p { color: rgba(255,255,255,0.78); font-size: 1.05rem; max-width: 560px; }
-
-    /* Before/after comparison */
-    .ba-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; border-radius: var(--radius-lg); overflow: hidden; }
-    .ba-img { position: relative; }
-    .ba-img img { width: 100%; height: 260px; object-fit: cover; display: block; }
-    .ba-label {
-      position: absolute; bottom: 10px; left: 10px;
-      background: rgba(0,0,0,0.6); color: #fff;
-      font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
-      letter-spacing: 0.1em; padding: 4px 10px; border-radius: 4px;
-    }
-
-    /* Photo gallery strip */
-    .photo-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: 50px; border-radius: var(--radius-lg); overflow: hidden; }
-    .photo-strip img { width: 100%; height: 180px; object-fit: cover; display: block; transition: transform 0.3s; }
-    .photo-strip img:hover { transform: scale(1.04); }
-
-    @media (max-width: 768px) {
-      .ba-grid { grid-template-columns: 1fr; }
-      .photo-strip { grid-template-columns: repeat(2, 1fr); }
-    }
-  
-    @media (max-width: 768px) {
-      .hero-bg img {
-        object-position: 35% top !important;
-      }
-      .hero-bg > div {
-        padding: 60px 24px 40px !important;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .hero-bg img {
-        content: url("images/nice3.png");
-        object-position: 90% 25% !important;
-      }
-    }
-
-    .hero-mobile { display: none; }
-    @media (max-width: 768px) {
-      .hero-desktop { display: none; }
-      .hero-mobile { display: block; }
-    }
+.hero-mobile { display: none; }
+@media (max-width: 768px) {
+  .hero-desktop { display: none; }
+  .hero-mobile { display: block; }
+}
 </style>
 </head>
 <body>
-
 <nav class="navbar">
   <div class="container">
     <a href="index.html" class="nav-logo">
@@ -132,283 +136,284 @@
 
 <div class="page-content">
 
-<!-- HERO -->
-<!-- DESKTOP HERO -->
-<section class="hero hero-desktop">
-  <div class="hero-bg">
-    <img src="images/nice4.png" alt="Locally Built LLC — on the job Oregon Coast" style="object-position:75% center;" />
-    <div style="position:relative;z-index:2;width:100%;padding:100px 48px;">
-      <div style="max-width:500px;">
-        <div class="section-label" style="text-shadow: 0 1px 6px rgba(0,0,0,0.8);">Bandon, Oregon</div>
-        <h1 style="color:#fff; margin-bottom:22px; line-height:1.15; text-shadow: 0 2px 12px rgba(0,0,0,0.7), 0 1px 3px rgba(0,0,0,0.9);">
-          Built Right.<br><span style="color:var(--color-accent);">Built Local.</span>
-        </h1>
-        <p style="color:rgba(255,255,255,0.95); font-size:1.1rem; margin-bottom:36px; max-width:460px; text-shadow: 0 1px 6px rgba(0,0,0,0.8);">
-          Locally Built LLC is your trusted home maintenance company on the Oregon Coast — delivering quality craftsmanship on repairs, remodels, roof cleaning, pressure washing, decks, and everything in between.
-        </p>
-        <div class="btn-group">
-          <a href="contact.html" class="btn btn-primary">Get a Free Quote</a>
-          <a href="projects.html" class="btn btn-outline">See Our Work</a>
+  <!-- DESKTOP HERO -->
+  <section class="hero hero-desktop">
+    <div class="hero-bg">
+      <img src="images/nice4.png" alt="Locally Built LLC — on the job Oregon Coast" style="object-position:75% center;" />
+      <div style="position:relative;z-index:2;width:100%;padding:100px 48px;">
+        <div style="max-width:500px;">
+          <div class="section-label" style="text-shadow: 0 1px 6px rgba(0,0,0,0.8);">Bandon, Oregon</div>
+          <h1 style="color:#fff; margin-bottom:22px; line-height:1.15; text-shadow: 0 2px 12px rgba(0,0,0,0.7), 0 1px 3px rgba(0,0,0,0.9);">
+            Built Right.<br><span style="color:var(--color-accent);">Built Local.</span>
+          </h1>
+          <p style="color:rgba(255,255,255,0.95); font-size:1.1rem; margin-bottom:36px; max-width:460px; text-shadow: 0 1px 6px rgba(0,0,0,0.8);">
+            Locally Built LLC is your trusted home maintenance company on the Oregon Coast — delivering quality craftsmanship on repairs, remodels, roof cleaning, pressure washing, decks, and everything in between.
+          </p>
+          <div class="btn-group">
+            <a href="contact.html" class="btn btn-primary">Get a Free Quote</a>
+            <a href="projects.html" class="btn btn-outline">See Our Work</a>
+          </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MOBILE HERO -->
+  <section class="hero-mobile">
+    <img src="images/nice4.png" alt="Locally Built LLC" style="width:100%; height:280px; object-fit:cover; object-position:center center; display:block;" />
+    <div style="background:var(--color-dark); padding:36px 24px;">
+      <div class="section-label">Bandon, Oregon</div>
+      <h1 style="color:#fff; margin-bottom:18px; line-height:1.15;">
+        Built Right.<br><span style="color:var(--color-accent);">Built Local.</span>
+      </h1>
+      <p style="color:rgba(255,255,255,0.85); font-size:1rem; margin-bottom:28px;">
+        Locally Built LLC is your trusted home maintenance company on the Oregon Coast — delivering quality craftsmanship on repairs, remodels, roof cleaning, pressure washing, decks, and everything in between.
+      </p>
+      <div class="btn-group">
+        <a href="contact.html" class="btn btn-primary">Get a Free Quote</a>
+        <a href="projects.html" class="btn btn-outline" style="border-color:var(--color-accent);color:var(--color-accent);">See Our Work</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="container">
+      <div class="trust-bar-inner">
+        <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Licensed</div>
+        <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Insured</div>
+        <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Bonded</div>
+        <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>Bandon, OR</div>
+        <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Free Estimates</div>
+        <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>5.0 Stars on Google</div>
       </div>
     </div>
   </div>
-</section>
 
-<!-- MOBILE HERO -->
-<section class="hero-mobile">
-  <img src="images/nice4.png" alt="Locally Built LLC" style="width:100%; height:280px; object-fit:cover; object-position:center center; display:block;" />
-  <div style="background:var(--color-dark); padding:36px 24px;">
-    <div class="section-label">Bandon, Oregon</div>
-    <h1 style="color:#fff; margin-bottom:18px; line-height:1.15;">
-      Built Right.<br><span style="color:var(--color-accent);">Built Local.</span>
-    </h1>
-    <p style="color:rgba(255,255,255,0.85); font-size:1rem; margin-bottom:28px;">
-      Locally Built LLC is your trusted home maintenance company on the Oregon Coast — delivering quality craftsmanship on repairs, remodels, roof cleaning, pressure washing, decks, and everything in between.
-    </p>
-    <div class="btn-group">
-      <a href="contact.html" class="btn btn-primary">Get a Free Quote</a>
-      <a href="projects.html" class="btn btn-outline" style="border-color:var(--color-accent);color:var(--color-accent);">See Our Work</a>
-    </div>
+  <!-- DIVIDER: trust-bar (green) → light section (white) -->
+  <div class="section-divider">
+    <svg viewBox="0 0 1440 54" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,0 C480,54 960,54 1440,0 L1440,54 L0,54 Z" fill="#f8f7f4"/>
+    </svg>
   </div>
-</section>
 
-<!-- TRUST BAR -->
-<div class="trust-bar">
-  <div class="container">
-    <div class="trust-bar-inner">
-      <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Licensed</div>
-      <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Insured</div>
-      <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Bonded</div>
-      <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>Bandon, OR</div>
-      <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Free Estimates</div>
-      <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>5.0 Stars on Google</div>
+  <!-- INTRO -->
+  <section class="section section--light">
+    <div class="container">
+      <div class="grid-2" style="align-items:center; gap:60px;">
+        <div>
+          <div class="section-label">Who We Are</div>
+          <h2 class="section-title">Your Neighbors.<br>Your Handyman.</h2>
+          <div class="divider"></div>
+          <p style="margin-bottom:18px;">
+            We're a locally owned and operated home maintenance company based right here in Bandon, Oregon. We know this coastline, we know these homes, and we know what it takes to keep a property in great shape against Oregon's coastal weather year-round.
+          </p>
+          <p style="margin-bottom:30px;">
+            From a leaky gutter to a full remodel, every job gets the same attention to detail, honest communication, and pride of craftsmanship our name is built on.
+          </p>
+          <a href="about.html" class="btn btn-outline-dark">Learn More About Us</a>
+        </div>
+        <div style="border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow-lg);">
+          <img src="images/work.png" alt="Locally Built LLC — window installation work on the Oregon Coast" style="width:100%; height:420px; object-fit:cover;" />
+        </div>
+      </div>
     </div>
+  </section>
+
+  <!-- DIVIDER: light → dark (services) -->
+  <div class="section-divider">
+    <svg viewBox="0 0 1440 54" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,54 C480,0 960,0 1440,54 L1440,54 L0,54 Z" fill="#1a2e1a"/>
+    </svg>
   </div>
-</div>
 
-<!-- INTRO -->
-<section class="section section--light">
-  <div class="container">
-    <div class="grid-2" style="align-items:center; gap:60px;">
-      <div>
-        <div class="section-label">Who We Are</div>
-        <h2 class="section-title">Your Neighbors.<br>Your Handyman.</h2>
-        <div class="divider"></div>
-        <p style="margin-bottom:18px;">
-          We're a locally owned and operated home maintenance company based right here in Bandon, Oregon. We know this coastline, we know these homes, and we know what it takes to keep a property in great shape against Oregon's coastal weather year-round.
-        </p>
-        <p style="margin-bottom:30px;">
-          From a leaky gutter to a full remodel, every job gets the same attention to detail, honest communication, and pride of craftsmanship our name is built on.
-        </p>
-        <a href="about.html" class="btn btn-outline-dark">Learn More About Us</a>
+  <!-- SERVICES OVERVIEW -->
+  <section class="section" style="background:var(--color-dark);">
+    <div class="container">
+      <div class="section-header section-header--center">
+        <div class="section-label">What We Do</div>
+        <h2 class="section-title" style="color:#fff;">Home Maintenance &amp; Repair<br>Done the Right Way</h2>
+        <div class="divider divider--center"></div>
+        <p class="section-subtitle" style="color:rgba(255,255,255,0.72);">Whether it's a small fix or a full remodel, we bring the same care and craftsmanship to every job.</p>
       </div>
-      <div style="border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow-lg);">
-        <img src="images/work.png" alt="Locally Built LLC — window installation work on the Oregon Coast" style="width:100%; height:420px; object-fit:cover;" />
+      <div class="grid-3">
+        <div class="card">
+          <img src="images/general_maintenence.png" alt="General repairs and maintenance" style="width:100%;height:200px;object-fit:cover;" />
+          <div class="card-body">
+            <div class="card-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
+            <h3 style="margin-bottom:10px;">General Repairs &amp; Maintenance</h3>
+            <p>From leaky gutters to rotted wood, broken doors to storm damage — we handle the repairs that keep your home in top shape.</p>
+            <a href="services.html#repairs" style="display:inline-flex;align-items:center;gap:6px;margin-top:18px;font-weight:600;font-size:0.88rem;color:var(--color-accent);">Learn more →</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/roofwash2.png" alt="Roof cleaning and gutter service" style="width:100%;height:200px;object-fit:cover;" />
+          <div class="card-body">
+            <div class="card-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+            <h3 style="margin-bottom:10px;">Roof Cleaning &amp; Gutters</h3>
+            <p>Moss treatment, soft wash roof cleaning, gutter cleaning and screen installation — protecting your roof from Oregon's relentless rain and growth.</p>
+            <a href="services.html#roofing" style="display:inline-flex;align-items:center;gap:6px;margin-top:18px;font-weight:600;font-size:0.88rem;color:var(--color-accent);">Learn more →</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/pressurewaashing.png" alt="Pressure washing in action" style="width:100%;height:200px;object-fit:cover;" />
+          <div class="card-body">
+            <div class="card-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+            <h3 style="margin-bottom:10px;">Pressure Washing</h3>
+            <p>Driveways, siding, decks, and more — we blast away years of grime, moss, and algae to restore your property's curb appeal.</p>
+            <a href="services.html#washing" style="display:inline-flex;align-items:center;gap:6px;margin-top:18px;font-weight:600;font-size:0.88rem;color:var(--color-accent);">Learn more →</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/planterboxes.png" alt="Custom cedar planter boxes on a deck" style="width:100%;height:200px;object-fit:cover;" />
+          <div class="card-body">
+            <div class="card-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V13a3 3 0 016 0v8M14 21V9a3 3 0 016 0v12"/><path d="M2 21h20"/></svg></div>
+            <h3 style="margin-bottom:10px;">Decks, Ramps &amp; Outdoor Builds</h3>
+            <p>Outdoor structures built to handle the Oregon Coast weather — decks, accessibility ramps, planter boxes, sheds, and more.</p>
+            <a href="services.html#decks" style="display:inline-flex;align-items:center;gap:6px;margin-top:18px;font-weight:600;font-size:0.88rem;color:var(--color-accent);">Learn more →</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/interiotpaintaftr.png" alt="Interior painting after" style="width:100%;height:200px;object-fit:cover;" />
+          <div class="card-body">
+            <div class="card-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 14.66V20a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2h5.34"/><polygon points="18 2 22 6 12 16 8 16 8 12 18 2"/></svg></div>
+            <h3 style="margin-bottom:10px;">Painting — Interior &amp; Exterior</h3>
+            <p>Clean, professional paint jobs that protect your home and refresh your space. We prep right so the finish lasts.</p>
+            <a href="services.html#painting" style="display:inline-flex;align-items:center;gap:6px;margin-top:18px;font-weight:600;font-size:0.88rem;color:var(--color-accent);">Learn more →</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/greenhouse2.png" alt="Custom greenhouse build" style="width:100%;height:200px;object-fit:cover;" />
+          <div class="card-body">
+            <div class="card-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></div>
+            <h3 style="margin-bottom:10px;">Custom Builds &amp; Carpentry</h3>
+            <p>Greenhouses, package drop boxes, built-ins, trim work — if you can dream it, we can build it with the same quality craftsmanship.</p>
+            <a href="services.html#carpentry" style="display:inline-flex;align-items:center;gap:6px;margin-top:18px;font-weight:600;font-size:0.88rem;color:var(--color-accent);">Learn more →</a>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:44px;">
+        <a href="services.html" class="btn btn-primary">View All Services</a>
       </div>
     </div>
+  </section>
+
+  <!-- DIVIDER: dark → dark (featured work also dark) — use accent wave -->
+  <div class="section-divider">
+    <svg viewBox="0 0 1440 54" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,0 C360,54 1080,54 1440,0 L1440,54 L0,54 Z" fill="var(--color-accent,#4a7c3f)"/>
+    </svg>
   </div>
-</section>
 
-<!-- SERVICES OVERVIEW -->
-<section class="section">
-  <div class="container">
-    <div class="section-header section-header--center">
-      <div class="section-label">What We Do</div>
-      <h2 class="section-title">Home Maintenance &amp; Repair<br>Done the Right Way</h2>
-      <div class="divider divider--center"></div>
-      <p class="section-subtitle">Whether it's a small fix or a full remodel, we bring the same care and craftsmanship to every job.</p>
+  <!-- FEATURED BEFORE/AFTER -->
+  <section class="section section--dark">
+    <div class="container">
+      <div class="grid-2" style="align-items:center; gap:60px;">
+        <div>
+          <div class="section-label">Featured Work</div>
+          <h2 style="color:var(--color-white); margin-bottom:16px;">Quality You Can See<br>at Every Stage</h2>
+          <div class="divider"></div>
+          <p style="color:rgba(255,255,255,0.72); margin-bottom:18px;">
+            Every project is a reflection of our commitment to doing things the right way — not the fast way. We use quality materials, experienced crews, and honest timelines.
+          </p>
+          <p style="color:rgba(255,255,255,0.72); margin-bottom:32px;">
+            From quick repairs to full remodels, clients get the same level of care, communication, and craftsmanship throughout.
+          </p>
+          <div class="btn-group">
+            <a href="projects.html" class="btn btn-primary">See All Projects</a>
+            <a href="contact.html" class="btn btn-outline">Start Your Project</a>
+          </div>
+        </div>
+        <div>
+          <p style="color:rgba(255,255,255,0.5); font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:8px;">Before &amp; After — Roof Cleaning</p>
+          <div class="ba-grid">
+            <div class="ba-img"><img src="images/roofwash3.png" alt="Roof before cleaning" /><div class="ba-label">Before</div></div>
+            <div class="ba-img"><img src="images/roofwash2.png" alt="Roof after cleaning" /><div class="ba-label">After</div></div>
+          </div>
+          <p style="color:rgba(255,255,255,0.5); font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; margin-top:16px; margin-bottom:8px;">Before &amp; After — Interior Paint</p>
+          <div class="ba-grid">
+            <div class="ba-img"><img src="images/interiorpaintbfr.png" alt="Room before painting" /><div class="ba-label">Before</div></div>
+            <div class="ba-img"><img src="images/interiotpaintaftr.png" alt="Room after painting" /><div class="ba-label">After</div></div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="grid-3">
+  </section>
 
-      <div class="card">
-        <img src="images/general_maintenence.png" alt="General repairs and maintenance" style="width:100%;height:200px;object-fit:cover;" />
-        <div class="card-body">
-          <div class="card-icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
-          </div>
-          <h3 style="margin-bottom:10px;">General Repairs &amp; Maintenance</h3>
-          <p>From leaky gutters to rotted wood, broken doors to storm damage — we handle the repairs that keep your home in top shape.</p>
-          <a href="services.html#repairs" style="display:inline-flex;align-items:center;gap:6px;margin-top:18px;font-weight:600;font-size:0.88rem;color:var(--color-accent);">Learn more →</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="images/roofwash2.png" alt="Roof cleaning and gutter service" style="width:100%;height:200px;object-fit:cover;" />
-        <div class="card-body">
-          <div class="card-icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-          </div>
-          <h3 style="margin-bottom:10px;">Roof Cleaning &amp; Gutters</h3>
-          <p>Moss treatment, soft wash roof cleaning, gutter cleaning and screen installation — protecting your roof from Oregon's relentless rain and growth.</p>
-          <a href="services.html#roofing" style="display:inline-flex;align-items:center;gap:6px;margin-top:18px;font-weight:600;font-size:0.88rem;color:var(--color-accent);">Learn more →</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="images/pressurewaashing.png" alt="Pressure washing in action" style="width:100%;height:200px;object-fit:cover;" />
-        <div class="card-body">
-          <div class="card-icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-          </div>
-          <h3 style="margin-bottom:10px;">Pressure Washing</h3>
-          <p>Driveways, siding, decks, and more — we blast away years of grime, moss, and algae to restore your property's curb appeal.</p>
-          <a href="services.html#washing" style="display:inline-flex;align-items:center;gap:6px;margin-top:18px;font-weight:600;font-size:0.88rem;color:var(--color-accent);">Learn more →</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="images/planterboxes.png" alt="Custom cedar planter boxes on a deck" style="width:100%;height:200px;object-fit:cover;" />
-        <div class="card-body">
-          <div class="card-icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V13a3 3 0 016 0v8M14 21V9a3 3 0 016 0v12"/><path d="M2 21h20"/></svg>
-          </div>
-          <h3 style="margin-bottom:10px;">Decks, Ramps &amp; Outdoor Builds</h3>
-          <p>Outdoor structures built to handle the Oregon Coast weather — decks, accessibility ramps, planter boxes, sheds, and more.</p>
-          <a href="services.html#decks" style="display:inline-flex;align-items:center;gap:6px;margin-top:18px;font-weight:600;font-size:0.88rem;color:var(--color-accent);">Learn more →</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="images/interiotpaintaftr.png" alt="Interior painting after" style="width:100%;height:200px;object-fit:cover;" />
-        <div class="card-body">
-          <div class="card-icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 14.66V20a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2h5.34"/><polygon points="18 2 22 6 12 16 8 16 8 12 18 2"/></svg>
-          </div>
-          <h3 style="margin-bottom:10px;">Painting — Interior &amp; Exterior</h3>
-          <p>Clean, professional paint jobs that protect your home and refresh your space. We prep right so the finish lasts.</p>
-          <a href="services.html#painting" style="display:inline-flex;align-items:center;gap:6px;margin-top:18px;font-weight:600;font-size:0.88rem;color:var(--color-accent);">Learn more →</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="images/greenhouse2.png" alt="Custom greenhouse build" style="width:100%;height:200px;object-fit:cover;" />
-        <div class="card-body">
-          <div class="card-icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
-          </div>
-          <h3 style="margin-bottom:10px;">Custom Builds &amp; Carpentry</h3>
-          <p>Greenhouses, package drop boxes, built-ins, trim work — if you can dream it, we can build it with the same quality craftsmanship.</p>
-          <a href="services.html#carpentry" style="display:inline-flex;align-items:center;gap:6px;margin-top:18px;font-weight:600;font-size:0.88rem;color:var(--color-accent);">Learn more →</a>
-        </div>
-      </div>
-
-    </div>
-    <div style="text-align:center; margin-top:44px;">
-      <a href="services.html" class="btn btn-primary">View All Services</a>
-    </div>
+  <!-- DIVIDER: dark → light (why choose us) -->
+  <div class="section-divider">
+    <svg viewBox="0 0 1440 54" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,0 C480,54 960,54 1440,0 L1440,54 L0,54 Z" fill="#f8f7f4"/>
+    </svg>
   </div>
-</section>
 
-<!-- FEATURED BEFORE/AFTER -->
-<section class="section section--dark">
-  <div class="container">
-    <div class="grid-2" style="align-items:center; gap:60px;">
-      <div>
-        <div class="section-label">Featured Work</div>
-        <h2 style="color:var(--color-white); margin-bottom:16px;">Quality You Can See<br>at Every Stage</h2>
-        <div class="divider"></div>
-        <p style="color:rgba(255,255,255,0.72); margin-bottom:18px;">
-          Every project is a reflection of our commitment to doing things the right way — not the fast way. We use quality materials, experienced crews, and honest timelines.
-        </p>
-        <p style="color:rgba(255,255,255,0.72); margin-bottom:32px;">
-          From quick repairs to full remodels, clients get the same level of care, communication, and craftsmanship throughout.
-        </p>
-        <div class="btn-group">
-          <a href="projects.html" class="btn btn-primary">See All Projects</a>
-          <a href="contact.html" class="btn btn-outline">Start Your Project</a>
+  <!-- WHY CHOOSE US -->
+  <section class="section section--light">
+    <div class="container">
+      <div class="section-header section-header--center">
+        <div class="section-label">Why Locally Built</div>
+        <h2 class="section-title">The Local Difference</h2>
+        <div class="divider divider--center"></div>
+      </div>
+      <div class="grid-4">
+        <div style="text-align:center; padding:24px 16px;">
+          <div style="width:60px;height:60px;background:var(--color-accent);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h4 style="margin-bottom:8px;">Licensed, Insured &amp; Bonded</h4>
+          <p style="font-size:0.9rem;">Full credentials and coverage protecting you and your investment on every job.</p>
+        </div>
+        <div style="text-align:center; padding:24px 16px;">
+          <div style="width:60px;height:60px;background:var(--color-accent);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+          </div>
+          <h4 style="margin-bottom:8px;">Locally Owned &amp; Operated</h4>
+          <p style="font-size:0.9rem;">We live and work right here in Bandon. Your project is an investment in our shared community.</p>
+        </div>
+        <div style="text-align:center; padding:24px 16px;">
+          <div style="width:60px;height:60px;background:var(--color-accent);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <h4 style="margin-bottom:8px;">Transparent Communication</h4>
+          <p style="font-size:0.9rem;">Regular updates, honest timelines, and a single point of contact from start to finish.</p>
+        </div>
+        <div style="text-align:center; padding:24px 16px;">
+          <div style="width:60px;height:60px;background:var(--color-accent);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h4 style="margin-bottom:8px;">Quality Craftsmanship</h4>
+          <p style="font-size:0.9rem;">We don't cut corners. Every build is done the way we'd do it on our own homes.</p>
         </div>
       </div>
-      <div>
-        <p style="color:rgba(255,255,255,0.5); font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:8px;">Before &amp; After — Roof Cleaning</p>
-        <div class="ba-grid">
-          <div class="ba-img">
-            <img src="images/roofwash3.png" alt="Roof before cleaning — heavy moss growth" />
-            <div class="ba-label">Before</div>
-          </div>
-          <div class="ba-img">
-            <img src="images/roofwash2.png" alt="Roof after cleaning — clean and restored" />
-            <div class="ba-label">After</div>
-          </div>
-        </div>
-        <p style="color:rgba(255,255,255,0.5); font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; margin-top:16px; margin-bottom:8px;">Before &amp; After — Interior Paint</p>
-        <div class="ba-grid">
-          <div class="ba-img">
-            <img src="images/interiorpaintbfr.png" alt="Room before painting" />
-            <div class="ba-label">Before</div>
-          </div>
-          <div class="ba-img">
-            <img src="images/interiotpaintaftr.png" alt="Room after painting" />
-            <div class="ba-label">After</div>
-          </div>
-        </div>
+      <div class="photo-strip">
+        <img src="images/ramp.png" alt="Accessibility ramp build" />
+        <img src="images/lawn.png" alt="Lawn mowing service" />
+        <img src="images/packagedropbox.png" alt="Custom package drop box build" />
+        <img src="images/work truck 2.png" alt="Locally Built LLC work truck" />
       </div>
     </div>
+  </section>
+
+  <!-- DIVIDER: light → accent (CTA) -->
+  <div class="section-divider">
+    <svg viewBox="0 0 1440 54" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,54 C360,0 1080,0 1440,54 L1440,54 L0,54 Z" fill="var(--color-accent,#4a7c3f)"/>
+    </svg>
   </div>
-</section>
 
-<!-- WHY CHOOSE US -->
-<section class="section section--light">
-  <div class="container">
-    <div class="section-header section-header--center">
-      <div class="section-label">Why Locally Built</div>
-      <h2 class="section-title">The Local Difference</h2>
-      <div class="divider divider--center"></div>
-    </div>
-    <div class="grid-4">
-      <div style="text-align:center; padding:24px 16px;">
-        <div style="width:60px;height:60px;background:var(--color-accent);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <h4 style="margin-bottom:8px;">Licensed, Insured &amp; Bonded</h4>
-        <p style="font-size:0.9rem;">Full credentials and coverage protecting you and your investment on every job.</p>
-      </div>
-      <div style="text-align:center; padding:24px 16px;">
-        <div style="width:60px;height:60px;background:var(--color-accent);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
-        </div>
-        <h4 style="margin-bottom:8px;">Locally Owned &amp; Operated</h4>
-        <p style="font-size:0.9rem;">We live and work right here in Bandon. Your project is an investment in our shared community.</p>
-      </div>
-      <div style="text-align:center; padding:24px 16px;">
-        <div style="width:60px;height:60px;background:var(--color-accent);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
-        </div>
-        <h4 style="margin-bottom:8px;">Transparent Communication</h4>
-        <p style="font-size:0.9rem;">Regular updates, honest timelines, and a single point of contact from start to finish.</p>
-      </div>
-      <div style="text-align:center; padding:24px 16px;">
-        <div style="width:60px;height:60px;background:var(--color-accent);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        </div>
-        <h4 style="margin-bottom:8px;">Quality Craftsmanship</h4>
-        <p style="font-size:0.9rem;">We don't cut corners. Every build is done the way we'd do it on our own homes.</p>
+  <!-- CTA BANNER -->
+  <section style="background:var(--color-accent); padding:70px 0;">
+    <div class="container" style="text-align:center;">
+      <h2 style="color:#fff; margin-bottom:14px;">Ready to Build Something?</h2>
+      <p style="color:rgba(255,255,255,0.85); max-width:480px; margin:0 auto 32px; font-size:1.05rem;">
+        Get a free estimate on your project. We'll talk through your goals, timeline, and budget — no pressure.
+      </p>
+      <div class="btn-group" style="justify-content:center;">
+        <a href="contact.html" class="btn" style="background:#fff;color:var(--color-accent);font-weight:800;">Request a Free Quote</a>
+        <a href="contact.html" class="btn btn-outline">Contact Us</a>
       </div>
     </div>
-
-    <!-- Photo strip -->
-    <div class="photo-strip">
-      <img src="images/ramp.png" alt="Accessibility ramp build" />
-      <img src="images/lawn.png" alt="Lawn mowing service" />
-      <img src="images/packagedropbox.png" alt="Custom package drop box build" />
-      <img src="images/work truck 2.png" alt="Locally Built LLC work truck" />
-    </div>
-  </div>
-</section>
-
-<!-- CTA BANNER -->
-<section style="background:var(--color-accent); padding:70px 0;">
-  <div class="container" style="text-align:center;">
-    <h2 style="color:#fff; margin-bottom:14px;">Ready to Build Something?</h2>
-    <p style="color:rgba(255,255,255,0.85); max-width:480px; margin:0 auto 32px; font-size:1.05rem;">
-      Get a free estimate on your project. We'll talk through your goals, timeline, and budget — no pressure.
-    </p>
-    <div class="btn-group" style="justify-content:center;">
-      <a href="contact.html" class="btn" style="background:#fff;color:var(--color-accent);font-weight:800;">Request a Free Quote</a>
-      <a href="contact.html" class="btn btn-outline">Contact Us</a>
-    </div>
-  </div>
-</section>
+  </section>
 
 </div>
 
@@ -449,6 +454,7 @@
     </div>
   </div>
 </footer>
+
 <script>function toggleNav(){document.getElementById('navLinks').classList.toggle('open');}</script>
 </body>
 </html>
